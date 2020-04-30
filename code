@@ -1,7 +1,8 @@
 import bpy
 
 # audio file 
-directory = r"*directory to sudio file*"
+directory = r"*path to song*"
+## ex "C:\Users\*user*\Music\song.mp3"
 
 #range variables for each bar (so you dont have to dig to change them)
 high0 = 23
@@ -25,19 +26,16 @@ high17 = 3497
 high18 = 4720
 high19 = 6371
 high20 = 8600
-
-#swap variables
-swap1 = "high{count}"
-swap2 = "high{count+1}"
-
 #cube name variables
 cname1 = 1
 cname2 = 0
 cname3 = 0
-
 #loop counter and cube count
-count = 0
+count = 2
 cubes = 20
+#swap variables
+swap1 = 0
+swap2 = 1
 
 ## you should not have to mess with anything lower than this line 
 ## (unless adding/removeing cubes)
@@ -87,3 +85,683 @@ count + 1
 
 ##########if count > cubes:##########
 ##########    break##########
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c002")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high1, high=high2)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c003")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high2, high=high3)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c004")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high3, high=high4)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c005")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high4, high=high5)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c006")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high5, high=high6)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c007")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high6, high=high7)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c008")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high7, high=high8)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c009")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high8, high=high9)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c010")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high9, high=high10)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c011")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high10, high=high11)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c012")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high11, high=high12)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c013")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high12, high=high13)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c014")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high13, high=high14)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c015")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high14, high=high15)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c016")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high15, high=high16)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c017")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high16, high=high17)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c018")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high17, high=high18)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c019")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high18, high=high19)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c020")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high19, high=high20)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
