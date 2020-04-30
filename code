@@ -1,0 +1,89 @@
+import bpy
+
+# audio file 
+directory = r"*directory to sudio file*"
+
+#range variables for each bar (so you dont have to dig to change them)
+high0 = 23
+high1 = 31
+high2 = 41
+high3 = 55
+high4 = 73
+high5 = 98
+high6 = 131
+high7 = 176
+high8 = 237
+high9 = 319
+high10 = 430 
+high11 = 580
+high12 = 782
+high13 = 1055
+high14 = 1423
+high15 = 1920
+high16 = 2591
+high17 = 3497
+high18 = 4720
+high19 = 6371
+high20 = 8600
+
+#swap variables
+swap1 = "high{count}"
+swap2 = "high{count+1}"
+
+#cube name variables
+cname1 = 1
+cname2 = 0
+cname3 = 0
+
+#loop counter and cube count
+count = 0
+cubes = 20
+
+## you should not have to mess with anything lower than this line 
+## (unless adding/removeing cubes)
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+
+#set cube
+#select cube
+bpy.ops.object.select_pattern(pattern="c001")
+#incroment cube name (not yet implemaented)
+cname1 + 1
+if cname1 == 10:
+    cname2 + 1
+    if cname2 == 10:
+        cname3 + 1
+        if cname3 == 10:
+            die("overflow")
+
+#starts makeing the keyframes (i think)
+bpy.ops.anim.keyframe_insert_menu(type='Scaling')
+
+#i have no idea what this line does
+bpy.context.area.type='GRAPH_EDITOR'
+
+#bakes f curves to audio
+bpy.ops.graph.sound_bake (filepath= directory,low=high0, high=high1)
+#incrament swaps (not implemented yet)
+swap1 + 1
+swap2 + 1
+
+#i honestly have no idea what this does
+bpy.context.active_object.animation_data.action.fcurves[0].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[1].lock = False 
+bpy.context.active_object.animation_data.action.fcurves[2].lock = False 
+
+#set x and y to desiered size
+bpy.context.active_object.scale.x = 0.320
+bpy.context.active_object.scale.y = 0.07
+
+#deslect cubes
+bpy.ops.object.select_all(action="DESELECT")
+
+##incroment loop counter (need to float variable calls first)
+count + 1
+
+##########if count > cubes:##########
+##########    break##########
